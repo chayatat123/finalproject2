@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 3;
+    public int maxHealth = 3;
+    private int currentHealth;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        Debug.Log("HP: " + health);
+        currentHealth -= damage;
+        Debug.Log("HP: " + currentHealth);
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -17,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Game Over");
-        // ใส่ระบบตายตรงนี้
+        Debug.Log("Player Dead");
+        // ใส่ Game Over ตรงนี้
     }
 }
