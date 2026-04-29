@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8074889753288640740, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_Distance
-      value: 12.4338
+      value: 12.899696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28882,7 +28882,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.1064436, b: 0.1064436, a: 1}
   m_Origin: {x: -3, y: -13, z: 0}
   m_Size: {x: 137, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
