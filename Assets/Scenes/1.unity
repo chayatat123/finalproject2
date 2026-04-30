@@ -11187,7 +11187,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 663979421}
   - {fileID: 1931050806}
   - {fileID: 1974153782}
   - {fileID: 989553886}
@@ -11402,7 +11401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 550986985}
+  m_Father: {fileID: 1359882199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &688127218
 Sprite:
@@ -32686,6 +32685,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 550986985}
+  - {fileID: 663979421}
+  - {fileID: 839071932}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -49849,7 +49850,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1359882199}
     m_Modifications:
     - target: {fileID: 363839421969096357, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: coinText
@@ -49861,11 +49862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67
+      value: -893
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.8
+      value: -516.2
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49918,7 +49919,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 249190965}
   - {fileID: 867949345}
-  - {fileID: 5057102136066760320}
   - {fileID: 1359882199}
   - {fileID: 1629416571}
   - {fileID: 475499321}
