@@ -10,6 +10,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        ResetHealth(); // 🔥 ใช้ฟังก์ชันเดียว
+    }
+
+    public void ResetHealth()
+    {
         currentHealth = maxHealth;
 
         if (hpSlider != null)
@@ -22,10 +27,9 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
         if (hpSlider != null)
-        {
             hpSlider.value = currentHealth;
-        }
 
         Debug.Log("HP: " + currentHealth);
 
@@ -38,6 +42,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player Dead");
-        GameManager.instance.GameOver(); // 🔥 ตัวนี้แหละ
+        GameManager.instance.GameOver();
     }
 }
