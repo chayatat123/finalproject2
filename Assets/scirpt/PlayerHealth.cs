@@ -24,6 +24,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player Dead");
-        // ใส่ Game Over ตรงนี้
+        GameManager.instance.GameOver(); // 🔥 ตัวนี้แหละ
     }
 }

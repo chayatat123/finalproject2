@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8074889753288640740}
   - component: {fileID: 5812823762727409068}
   - component: {fileID: 1295742986533678226}
+  - component: {fileID: 9210522012483715292}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -277,9 +278,8 @@ MonoBehaviour:
   speed: 5
   waterSpeed: 4
   jumpForce: 400
-  waterGravity: 0.1
-  surfaceJumpForce: 600
-  swimUpForce: 250
+  swimForce: 8
+  waterDrag: 2
 --- !u!114 &363839421969096357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.035734653, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 7.3202477
+  m_Distance: 2.9331355
   m_MaxDistanceOnly: 0
 --- !u!120 &5812823762727409068
 LineRenderer:
@@ -436,4 +436,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RopeSwinger
   lineRenderer: {fileID: 5812823762727409068}
   joint: {fileID: 8074889753288640740}
-  step: 0.02
+--- !u!114 &9210522012483715292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743001586800931631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eefdbf106c454e4790077aea1d71a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 3

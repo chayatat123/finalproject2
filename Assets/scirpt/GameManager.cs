@@ -1,27 +1,43 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public GameObject gameOverUI;
 
     void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // 🔥 สำคัญ
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void GameOver()
     {
         gameOverUI.SetActive(true);
-        Time.timeScale = 0f; // หยุดเกม
+        Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
-        );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu"); // 🔥 ใส่ชื่อ Scene เมนูของมึง
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game"); // ไว้ดูใน Unity
+        Application.Quit();
     }
 }
