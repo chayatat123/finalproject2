@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // 🔥 สำคัญ
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -19,25 +19,48 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        if (gameOverUI != null)
+            gameOverUI.SetActive(false);
+    }
+
     public void GameOver()
     {
-        gameOverUI.SetActive(true);
-        Time.timeScale = 0f;
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        gameOverUI.SetActive(false);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu"); // 🔥 ใส่ชื่อ Scene เมนูของมึง
+        gameOverUI.SetActive(false);
+
+        SceneManager.LoadScene("Menu");
     }
+
     public void QuitGame()
     {
-        Debug.Log("Quit Game"); // ไว้ดูใน Unity
+        Debug.Log("Quit Game");
+
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+            #else
         Application.Quit();
+        #endif
     }
 }
