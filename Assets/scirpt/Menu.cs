@@ -1,15 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void loadScene(string sceneName)
+    public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1f; // 🔥 กันเกมค้าง
+
         SceneManager.LoadScene(sceneName);
     }
 
-    
+    public void StartGame()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("Scene1"); // 👈 เปลี่ยนชื่อด่าน
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game");
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }

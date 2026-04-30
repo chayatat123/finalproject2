@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            SceneManager.sceneLoaded += OnSceneLoaded; // 🔥 สำคัญ
         }
         else
         {
@@ -19,12 +21,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (gameOverUI != null)
+        // 🔥 หา GameOverUI ใหม่ทุก Scene
+        GameObject ui = GameObject.Find("GameOverUI");
+
+        if (ui != null)
+        {
+            gameOverUI = ui;
             gameOverUI.SetActive(false);
+        }
     }
 
+    // ===== GAME =====
     public void GameOver()
     {
         if (gameOverUI != null)
@@ -35,20 +44,30 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        else
+        {
+            Debug.LogError("GameOverUI is NULL");
+        }
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        gameOverUI.SetActive(false);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    // ===== MENU =====
+    public void StartGame()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("1"); // 🔥 ใช้ชื่อจริงของคุณ
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        gameOverUI.SetActive(false);
 
         SceneManager.LoadScene("Menu");
     }
@@ -57,10 +76,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Quit Game");
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-            #else
+#else
         Application.Quit();
-        #endif
+#endif
     }
 }
