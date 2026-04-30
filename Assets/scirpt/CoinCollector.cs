@@ -1,21 +1,32 @@
 using UnityEngine;
-using TMPro; // สำหรับใช้ TextMeshPro
+using TMPro;
 
 public class CoinCollector : MonoBehaviour
 {
+    public static int totalCoins = 0; // 🔥 ต้องมีตัวนี้
+
     private int coinCount = 0;
-    public TextMeshProUGUI coinText; // ลากตัวหนังสือ UI มาใส่ในช่องนี้
+    public TextMeshProUGUI coinText;
+
+    void Start()
+    {
+        if (coinText == null)
+        {
+            coinText = GameObject.Find("CoinText").GetComponent<TextMeshProUGUI>();
+        }
+
+        UpdateUI();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // ตรวจสอบว่าสิ่งที่ชนมี Tag ว่า "Coin" หรือไม่
-        if (other.gameObject.CompareTag("Coin"))
+        if (other.CompareTag("Coin"))
         {
-            coinCount++; // เพิ่มคะแนน
-            UpdateUI();  // อัปเดตตัวเลขบนหน้าจอ
+            coinCount++;
+            totalCoins++; // 🔥 เพิ่มคะแนนรวม
 
-            Destroy(other.gameObject); // ลบเหรียญออกจากฉาก
-            Debug.Log("เก็บเหรียญแล้ว! ตอนนี้มี: " + coinCount);
+            UpdateUI();
+            Destroy(other.gameObject);
         }
     }
 
@@ -23,7 +34,7 @@ public class CoinCollector : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = "Coins: " + coinCount;
+            coinText.text = "Coins: " + totalCoins;
         }
     }
 }
