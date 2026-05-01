@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1670040245}
+    - target: {fileID: 380160838117369438, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
+      propertyPath: jumpForce
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 743001586800931631, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -670,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 300.7
+      value: -10.84
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -715,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 9210522012483715292, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: hpSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 908803951}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -760,7 +764,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 419e0dd2af0860946a20f599d2ae7a75, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.342
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -30428,6 +30432,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+--- !u!114 &908803951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3000615114836144158, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+  m_PrefabInstance: {fileID: 908803950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!4 &909223030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
@@ -31575,7 +31590,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6031566af0db56b4cbffd63c4b51a430, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.215
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -31688,7 +31703,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e8635509bce199e4d9c79f44b0d78a2e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.164
   m_Pitch: 1
   Loop: 0
   Mute: 0

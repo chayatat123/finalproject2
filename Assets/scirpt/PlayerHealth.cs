@@ -1,30 +1,22 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // <--- สำคัญมาก: ต้องเพิ่มอันนี้เพื่อใช้ UI
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentHealth;
 
-    private Slider hpSlider;
+    public Slider hpSlider; // <--- ลาก Slider จากหน้าต่าง Hierarchy มาใส่ในช่องนี้
 
     void Start()
     {
         currentHealth = maxHealth;
 
-        // 🔥 หา HPBar ใหม่ทุก Scene
-        GameObject hpObj = GameObject.Find("HPBar");
-
-        if (hpObj != null)
+        // ตั้งค่าเริ่มต้นให้ HP Bar
+        if (hpSlider != null)
         {
-            hpSlider = hpObj.GetComponent<Slider>();
-
             hpSlider.maxValue = maxHealth;
             hpSlider.value = currentHealth;
-        }
-        else
-        {
-            Debug.LogWarning("❌ ไม่เจอ HPBar ใน Scene นี้");
         }
     }
 
@@ -32,12 +24,23 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
 
+        // อัปเดตค่าใน HP Bar ทุกครั้งที่โดนดาเมจ
         if (hpSlider != null)
+        {
             hpSlider.value = currentHealth;
+        }
+
+        Debug.Log("HP: " + currentHealth);
 
         if (currentHealth <= 0)
         {
-            GameManager.instance.GameOver();
+            Die();
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player Dead");
+        // GameManager.instance.GameOver();
     }
 }

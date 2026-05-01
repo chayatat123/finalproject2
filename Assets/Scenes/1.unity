@@ -10377,6 +10377,15 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 3
     m_Data: {fileID: -578781867, guid: fe6eba9997972f94d95cc6de83f5d3f7, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 0
+    m_Data: {fileID: 688127218}
+  - serializedVersion: 2
+    m_RefCount: 0
+    m_Data: {fileID: 64804380}
+  - serializedVersion: 2
+    m_RefCount: 0
+    m_Data: {fileID: 1165626894}
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 943
@@ -21761,6 +21770,20 @@ MonoBehaviour:
   jumpForce: 5
   jumpSound: {fileID: 8300000, guid: e8635509bce199e4d9c79f44b0d78a2e, type: 3}
   walkSound: {fileID: 8300000, guid: 6031566af0db56b4cbffd63c4b51a430, type: 3}
+--- !u!114 &839071939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783454041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eefdbf106c454e4790077aea1d71a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth1
+  maxHealth: 3
+  hpSlider: {fileID: 989553887}
 --- !u!1 &851272329
 GameObject:
   m_ObjectHideFlags: 0
@@ -51076,16 +51099,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8074889753288640740, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_Distance
-      value: 71.06794
+      value: 109.96393
       objectReference: {fileID: 0}
     - target: {fileID: 9210522012483715292, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 989553887}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9210522012483715292, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 743001586800931631, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
+      insertIndex: 7
+      addedObject: {fileID: 839071939}
     - targetCorrespondingSourceObject: {fileID: 743001586800931631, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 839071935}
