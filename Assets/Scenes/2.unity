@@ -30529,8 +30529,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1629059912017013630, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629059912017013630, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629059912017013630, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629059912017013630, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2912530265297886622, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000615114836144158, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
+      propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3371706114008543473, guid: 5b6b8ad5925d3d2438349d841846a319, type: 3}
