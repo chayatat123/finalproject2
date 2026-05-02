@@ -30334,8 +30334,8 @@ BuoyancyEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_SurfaceLevel: 0
-  m_Density: 0.5
+  m_SurfaceLevel: 0.3
+  m_Density: 0.6
   m_LinearDamping: 5
   m_AngularDamping: 1
   m_FlowAngle: 0
@@ -30375,7 +30375,7 @@ BoxCollider2D:
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 36.80204, y: -13.396949}
+  m_Offset: {x: 36.80204, y: -13.959263}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -30385,7 +30385,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 55.784348, y: 17.206102}
+  m_Size: {x: 55.784348, y: 16.531326}
   m_EdgeRadius: 0
 --- !u!1 &867949343
 GameObject:
@@ -31599,7 +31599,6 @@ GameObject:
   - component: {fileID: 1044875634}
   - component: {fileID: 1044875633}
   - component: {fileID: 1044875632}
-  - component: {fileID: 1044875635}
   m_Layer: 0
   m_Name: Pidgeon Sprite Sheet_12 (4)
   m_TagString: Untagged
@@ -31703,18 +31702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1044875635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044875631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a841fad8ad8b6418d7223894bf3b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
 --- !u!1 &1104708574
 GameObject:
   m_ObjectHideFlags: 0
@@ -31817,7 +31804,6 @@ GameObject:
   - component: {fileID: 1122678673}
   - component: {fileID: 1122678672}
   - component: {fileID: 1122678671}
-  - component: {fileID: 1122678674}
   m_Layer: 0
   m_Name: Pidgeon Sprite Sheet_12 (3)
   m_TagString: Untagged
@@ -31921,18 +31907,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1122678674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122678670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a841fad8ad8b6418d7223894bf3b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
 --- !u!1 &1154194645
 GameObject:
   m_ObjectHideFlags: 0
@@ -33638,7 +33612,6 @@ GameObject:
   - component: {fileID: 1339035840}
   - component: {fileID: 1339035839}
   - component: {fileID: 1339035838}
-  - component: {fileID: 1339035841}
   m_Layer: 0
   m_Name: Pidgeon Sprite Sheet_12 (1)
   m_TagString: Untagged
@@ -33742,18 +33715,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1339035841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339035837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a841fad8ad8b6418d7223894bf3b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
 --- !u!1 &1359882198
 GameObject:
   m_ObjectHideFlags: 0
@@ -50580,7 +50541,6 @@ GameObject:
   - component: {fileID: 1865234337}
   - component: {fileID: 1865234336}
   - component: {fileID: 1865234335}
-  - component: {fileID: 1865234338}
   m_Layer: 0
   m_Name: Pidgeon Sprite Sheet_12
   m_TagString: Untagged
@@ -50684,18 +50644,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1865234338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865234334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a841fad8ad8b6418d7223894bf3b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
 --- !u!1 &1901685968
 GameObject:
   m_ObjectHideFlags: 0
@@ -51054,7 +51002,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2040906893}
-  - component: {fileID: 2040906892}
   m_Layer: 0
   m_Name: MovingPlatform2D
   m_TagString: Untagged
@@ -51062,18 +51009,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2040906892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040906891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a841fad8ad8b6418d7223894bf3b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform2D
 --- !u!4 &2040906893
 Transform:
   m_ObjectHideFlags: 0
@@ -51282,7 +51217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.2
+      value: -109.7
       objectReference: {fileID: 0}
     - target: {fileID: 1619198538992552750, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51322,7 +51257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8074889753288640740, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: m_Distance
-      value: 109.96393
+      value: 11.904935
       objectReference: {fileID: 0}
     - target: {fileID: 9210522012483715292, guid: 87881d61c9ce69247bf791d153066f2a, type: 3}
       propertyPath: hpSlider

@@ -25,20 +25,16 @@ public class Player2DController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        rb.gravityScale = 1f;
     }
 
     void Update()
     {
-        // รับ input ซ้าย-ขวา
-        moveInput =
-            (Keyboard.current.dKey.isPressed ? 1 : 0) -
-            (Keyboard.current.aKey.isPressed ? 1 : 0);
+        moveInput = Input.GetAxis("Horizontal");
 
-        // หันตัวละคร
         if (moveInput < 0) sr.flipX = true;
         else if (moveInput > 0) sr.flipX = false;
 
-        // เลือกโหมด
         if (isInWater)
             WaterControl();
         else
@@ -49,7 +45,7 @@ public class Player2DController : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce);
         }
@@ -57,21 +53,14 @@ public class Player2DController : MonoBehaviour
 
     void WaterControl()
     {
-        float verticalInput = 0;
-
-        if (Keyboard.current.wKey.isPressed || Keyboard.current.spaceKey.isPressed)
-            verticalInput = 1;
-
-        if (Keyboard.current.sKey.isPressed)
-            verticalInput = -1;
-
-        // ✅ คุมแค่แกน X (Y ให้ Buoyancy จัดการ)
+        float verticalInput = Input.GetAxis("Vertical");
+        rb.linearDamping = waterDrag;
         rb.linearVelocity = new Vector2(
             moveInput * waterSpeed,
             rb.linearVelocity.y
+
         );
 
-        // ✅ ใช้แรงแทนการเซ็ตค่า
         if (verticalInput != 0)
         {
             rb.AddForce(Vector2.up * verticalInput * swimForce);
